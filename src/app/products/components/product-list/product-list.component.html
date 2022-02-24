@@ -1,4 +1,7 @@
 <app-product></app-product>
-<ul>
-  <li *ngFor="let product of products">{{product.name}}: {{product.price}}</li>
-</ul>
+<mat-card *ngFor="let product of products">
+  <mat-card-content>
+    <mat-card-title>{{product.name}}: {{product.price}}</mat-card-title>
+    <mat-icon>add_shopping_cart</mat-icon>
+  </mat-card-content>  
+</mat-card>
