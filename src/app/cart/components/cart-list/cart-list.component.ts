@@ -7,11 +7,7 @@ import { Product } from 'src/app/products/models/product.model';
   styleUrls: ['./cart-list.component.css']
 })
 export class CartListComponent implements OnInit {
-  boughtProducts: Product[] = [
-    // {name: 'Milk', price: 2},
-    // {name: 'Book', price: 1},
-    // {name: 'Flower', price: 9},
-  ];
+  boughtProducts: Product[] = [];
   
   constructor() { }
   
