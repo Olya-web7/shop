@@ -4,9 +4,9 @@
 
 <h2>Cart</h2>
 <div *ngIf="boughtProducts.length > 0; else empty"></div>
-<ul>
-  <li *ngFor="let product of boughtProducts">{{product.name}}</li>
-</ul>
+
+  <p *ngFor="let product of boughtProducts">{{product.name}}</p>
+
 
 <ng-template #empty>
   <h3>Cart is empty</h3>
