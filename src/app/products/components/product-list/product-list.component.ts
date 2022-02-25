@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CartService } from 'src/app/cart/services/cart.service';
 import { Product } from '../../models/product.model';
 
 @Component({
@@ -7,13 +8,15 @@ import { Product } from '../../models/product.model';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  products: Product[] = [
+  @Input() products: Product[] = [
     {name: 'Milk', price: 2},
     {name: 'Book', price: 1},
     {name: 'Flower', price: 9},
   ];
 
-  constructor() { }
+  boughtProducts: Product[] = [];
+
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
   }
@@ -21,5 +24,16 @@ export class ProductListComponent implements OnInit {
   getProducts() {
     return this.products;
   }
+
+  getCart() {
+    return JSON.parse(localStorage.getItem('cart') as string) || [];
+  }
+
+  addToCart(product: Product) {
+    const cart = this.getCart();
+    cart.push(product.name);
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }
+
 
 }
