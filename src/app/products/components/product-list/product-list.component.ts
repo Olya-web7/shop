@@ -25,15 +25,15 @@ export class ProductListComponent implements OnInit {
     return this.products;
   }
 
-  // getCart() {
-  //   return JSON.parse(localStorage.getItem('cart') as string) || [];
-  // }
+  getCart() {
+    return JSON.parse(localStorage.getItem('cart') as string) || [];
+  }
 
-  // addToCart(product: Product) {
-  //   const cart = this.getCart();
-  //   cart.push(product.name);
-  //   localStorage.setItem('cart', JSON.stringify(cart))
-  // }
+  addToCart(product: Product) {
+    const cart = this.getCart();
+    cart.push(product.name);
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }
 
 
 }

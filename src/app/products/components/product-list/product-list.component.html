@@ -2,7 +2,7 @@
 <mat-card *ngFor="let product of products">
   <mat-card-content>
     <mat-card-title>{{product.name}}: {{product.price}}</mat-card-title>
-    <!-- <a (click)="addToCart(product)"><mat-icon>add_shopping_cart</mat-icon></a>  -->
+    <a (click)="addToCart(product)"><mat-icon>add_shopping_cart</mat-icon></a> 
     
   </mat-card-content>  
 </mat-card>
