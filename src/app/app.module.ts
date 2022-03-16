@@ -10,6 +10,10 @@ import { CartListComponent } from './cart/components/cart-list/cart-list.compone
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import { CartModule } from './cart/cart.module';
+import { ProductsModule } from './products/products.module';
+import { OrdersModule } from './orders/orders.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import {MatIconModule} from '@angular/material/icon';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    CartModule,
+    ProductsModule,
+    OrdersModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
