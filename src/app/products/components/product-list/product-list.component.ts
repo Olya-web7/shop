@@ -9,11 +9,9 @@ import { Product } from '../../models/product.model';
 })
 export class ProductListComponent implements OnInit {
   @Input() products: Product[] = [
-    // думаю, что стоит задействовать id
-    // в будущем будет проще работать
-    {name: 'Milk', price: 2},
-    {name: 'Book', price: 1},
-    {name: 'Flower', price: 9},
+    {id: 1, name: 'Milk', price: 2},
+    {id: 2, name: 'Book', price: 1},
+    {id: 3, name: 'Flower', price: 9},
   ];
 
   boughtProducts: Product[] = [];
