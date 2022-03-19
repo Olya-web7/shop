@@ -3,3 +3,11 @@ export interface Product {
   name?: string;
   price: number;
 }
+
+export class Product {
+  constructor(
+  id: number,
+  name: string,
+  price: number
+  ) {}
+}
