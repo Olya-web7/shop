@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../../models/product.model';
-import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-product',
@@ -8,17 +7,17 @@ import { ProductsService } from '../../services/products.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  products!: Array<Product>;
+  @Input() product!: Product;
+  @Output() addProductToCart: EventEmitter<Product> = new EventEmitter<Product>();
 
-  constructor(public productsService: ProductsService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.products = this.productsService.getProducts();
   }
 
-  onAddToCart() {
-    console.log('The product moved to your cart');
-    
+  onBuyButtonClick(): void {
+    this.addProductToCart.emit(this.product);
   }
 
 }
+
