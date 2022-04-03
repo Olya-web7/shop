@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/cart/services/cart.service';
 import { Product } from '../../models/product.model';
 import { ProductsService } from '../../services/products.service';
@@ -16,10 +16,6 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.products = this.productService.getProducts();
-  }
-
-  getProducts() {
-    return this.products;
   }
 
   onAddProductToCart(product: Product) {
