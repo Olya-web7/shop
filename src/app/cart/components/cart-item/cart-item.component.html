@@ -6,10 +6,10 @@
   <div class="item-count">
     <p class="mat-subheading-2">{{ count }}</p>
     <div class="item-count-controls">
-      <button mat-mini-fab color="primary" (click)="onQuantityIncrease()">
+      <button mat-mini-fab (click)="onQuantityIncrease()">
         <mat-icon>add</mat-icon>
       </button>
-      <button mat-mini-fab color="primary" [disabled]="count < 2" (click)="onQuantityDecrease()">
+      <button mat-mini-fab [disabled]="count < 2" (click)="onQuantityDecrease()">
         <mat-icon>remove</mat-icon>
       </button>
     </div>
