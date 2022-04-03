@@ -1,8 +1,7 @@
-<app-product></app-product>
-<mat-card *ngFor="let product of products">
-  <mat-card-content>
-    <mat-card-title>{{product.name}}: {{product.price}}</mat-card-title>
-    <a (click)="addToCart(product)"><mat-icon>add_shopping_cart</mat-icon></a> 
-    
-  </mat-card-content>  
-</mat-card>
+<div>
+  <app-product
+    *ngFor="let product of products"
+    [product]="product"
+    (addProductToCart)="onAddProductToCart($event)"
+  ></app-product>
+</div>
