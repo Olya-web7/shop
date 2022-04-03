@@ -1,11 +1,11 @@
 <mat-card class="cart-item-card">
   <div class="item-text">
     <p class="mat-title">{{ product.name }}</p>
-    <p class="mat-subheading-1">{{ product.price | currency }}</p>
+    <p>{{ product.price | currency }}</p>
   </div>
-  <div class="item-count">
-    <p class="mat-subheading-2">{{ count }}</p>
-    <div class="item-count-controls">
+  <div>
+    <p>{{ count }}</p>
+    <div>
       <button mat-mini-fab (click)="onQuantityIncrease()">
         <mat-icon>add</mat-icon>
       </button>
