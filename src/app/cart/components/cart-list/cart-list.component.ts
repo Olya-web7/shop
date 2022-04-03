@@ -12,4 +12,5 @@ export class CartListComponent implements OnInit {
   constructor() { }
   
   ngOnInit(): void { }  
+
 }
