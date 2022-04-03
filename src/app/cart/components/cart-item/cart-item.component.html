@@ -3,7 +3,7 @@
     <p class="mat-title">{{ product.name }}</p>
     <p>{{ product.price | currency }}</p>
   </div>
-  <div>
+  <mat-card-actions>
     <p>{{ count }}</p>
     <div>
       <button mat-mini-fab (click)="onQuantityIncrease()">
@@ -13,13 +13,13 @@
         <mat-icon>remove</mat-icon>
       </button>
     </div>
-  </div>
-  <div>
-    <p>{{ count * product.price | currency }}</p>
-  </div>
-  <div class="item-delete">
+  </mat-card-actions>
+  
+  <mat-card-actions>
     <button mat-icon-button (click)="onDeleteItem()">
       <mat-icon>clear</mat-icon>
-    </button>
-  </div>
+    </button>  
+    <p>{{ count * product.price | currency }}</p>
+  </mat-card-actions>
+
 </mat-card>
