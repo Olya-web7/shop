@@ -18,6 +18,10 @@ export class ProductListComponent implements OnInit {
     this.products = this.productService.getProducts();
   }
 
+  getProducts() {
+    return this.products;
+  }
+
   onAddProductToCart(product: Product) {
     this.cartService.addProduct(product);
   }
