@@ -1,13 +1,8 @@
 export interface Product {
-  id?: number,
-  name?: string;
+  id: number;
+  name: string;
+  description?: string;
   price: number;
-}
-
-export class Product {
-  constructor(
-  id: number,
-  name: string,
-  price: number
-  ) {}
+  isAvailable?: boolean;
+  imageUrl?: string;
 }
