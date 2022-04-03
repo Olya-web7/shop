@@ -11,9 +11,5 @@ export class CartListComponent implements OnInit {
   
   constructor() { }
   
-  ngOnInit(): void {
-    // this.boughtProducts = JSON.parse(localStorage.getItem('cart') as string);
-  }
-  
-  // trackByItems(index: number, item: Product): string { return item.name; }
+  ngOnInit(): void { }  
 }
