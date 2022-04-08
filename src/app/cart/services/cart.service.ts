@@ -60,11 +60,10 @@ export class CartService {
     return this.cartProducts$.pipe(map(cartProductArray => cartProductArray.flatMap(func).reduce((a, b) => a + b, 0)));
   }
 
-  increaseQuantity() {
+  increaseQuantity(productId: number) {}
+    
 
-  }
+  decreaseQuantity(productId: number) {}
 
-  decreaseQuantity() {
-
-  }
+  isEmptyCart() {}
 }
