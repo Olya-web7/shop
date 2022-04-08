@@ -59,4 +59,12 @@ export class CartService {
   private getTotal(func: (p: CartProduct) => number) {
     return this.cartProducts$.pipe(map(cartProductArray => cartProductArray.flatMap(func).reduce((a, b) => a + b, 0)));
   }
+
+  increaseQuantity() {
+
+  }
+
+  decreaseQuantity() {
+    
+  }
 }
