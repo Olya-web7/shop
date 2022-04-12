@@ -1,6 +1,6 @@
 mat-card {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 15px;
   background-color: #141414;
   color: rgb(43, 98, 186);
