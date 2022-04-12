@@ -1,16 +1,11 @@
 <mat-card class="cart-item-card">
   <div>    
-    <h2><span matBadge="{{ count }}" matBadgeOverlap="false">
-      {{ product.name }}</span></h2>
-    <p>{{ product.price | currency }}</p>     
-      <div>               
-        <a mat-icon-button color="primary" (click)="onQuantityIncrease()">
-          <mat-icon>add</mat-icon>
-        </a>
-        <a mat-icon-button color="primary" (click)="onQuantityDecrease()">
-          <mat-icon>remove</mat-icon>
-        </a>
-      </div>
+    <h2><span matBadge="{{ count }}" matBadgeOverlap="false">{{ product.name }}</span></h2>
+    <div>
+      <p>{{ product.price | currency }}</p>              
+      <button mat-icon-button (click)="onQuantityIncrease()">+</button>
+      <button mat-icon-button (click)="onQuantityDecrease()">-</button>
+    </div>
     <h3>Total: {{ count * product.price | currency }}</h3>
   </div>
   <a mat-icon-button (click)="onDeleteItem()">
