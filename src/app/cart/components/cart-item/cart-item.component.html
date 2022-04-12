@@ -1,25 +1,22 @@
 <mat-card class="cart-item-card">
-  <div class="item-text">
-    <p class="mat-title">{{ product.name }}</p>
-    <p>{{ product.price | currency }}</p>
-  </div>
-  <mat-card-actions>
-    <p>{{ count }}</p>    
-    <div>
-      <button mat-icon-button (click)="onQuantityIncrease()">
-        <mat-icon>add</mat-icon>
-      </button>
-      <button mat-icon-button [disabled]="count < 2" (click)="onQuantityDecrease()">
-        <mat-icon>remove</mat-icon>
-      </button>
+  <div>
+    <div style="display: flex;">
+      <p class="mat-title">{{ product.name }}</p> / <p>{{ product.price | currency }}</p> 
     </div>
-  </mat-card-actions>
-  
-  <mat-card-actions>
-    <button mat-icon-button (click)="onDeleteItem()">
-      <mat-icon>clear</mat-icon>
-    </button>  
-    <p>{{ count * product.price | currency }}</p>
-  </mat-card-actions>
-
+    <div>
+      <div style="display: flex; align-items: center;">
+        <h2>{{ count }}</h2>       
+        <button mat-icon-button (click)="onQuantityIncrease()">
+          <mat-icon>add</mat-icon>
+        </button>
+        <button mat-icon-button [disabled]="count < 2" (click)="onQuantityDecrease()">
+          <mat-icon>remove</mat-icon>
+        </button>
+      </div>
+    </div>
+    <p>Total: {{ count * product.price | currency }}</p>
+  </div>
+  <button mat-icon-button (click)="onDeleteItem()">
+    <mat-icon>clear</mat-icon>
+  </button>  
 </mat-card>

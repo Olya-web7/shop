@@ -1,6 +1,6 @@
 mat-card {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 15px;
   background-color: #141414;
   color: rgb(43, 98, 186);
@@ -10,6 +10,3 @@ mat-card {
   background-color: rgb(43, 98, 186);
 }
 
-.mat-card-actions {
-  text-align: center;
-}
