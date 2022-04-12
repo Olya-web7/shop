@@ -3,11 +3,11 @@ mat-card {
   justify-content: space-between;
   margin: 15px;
   background-color: #141414;
-  color: rgb(43, 98, 186);
+  color: #3f51b5;
 }
 
 button {
-  background-color: rgb(43, 98, 186);
+  background-color: #3f51b5;
 }
 
 mat-icon {
@@ -15,5 +15,5 @@ mat-icon {
 }
 
 mat-card-subtitle {
-  color: rgb(43, 98, 186);
+  color: #3f51b5;
 }

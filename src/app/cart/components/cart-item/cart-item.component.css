@@ -3,10 +3,5 @@ mat-card {
   justify-content: space-between;
   margin: 15px;
   background-color: #141414;
-  color: rgb(43, 98, 186);
+  color: #3f51b5;
 }
-
-.mat-mini-fab {
-  background-color: rgb(43, 98, 186);
-}
-
