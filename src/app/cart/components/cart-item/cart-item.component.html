@@ -4,12 +4,12 @@
     <p>{{ product.price | currency }}</p>
   </div>
   <mat-card-actions>
-    <p>{{ count }}</p>
+    <p>{{ count }}</p>    
     <div>
-      <button mat-mini-fab (click)="onQuantityIncrease()">
+      <button mat-icon-button (click)="onQuantityIncrease()">
         <mat-icon>add</mat-icon>
       </button>
-      <button mat-mini-fab [disabled]="count < 2" (click)="onQuantityDecrease()">
+      <button mat-icon-button [disabled]="count < 2" (click)="onQuantityDecrease()">
         <mat-icon>remove</mat-icon>
       </button>
     </div>

@@ -2,4 +2,22 @@ mat-card {
   display: flex;
   justify-content: space-between;
   margin: 15px;
+  background-color: #141414;
+  color: rgb(43, 98, 186);
 }
+
+.mat-mini-fab {
+  background-color: rgb(43, 98, 186);
+}
+
+.mat-card-actions {
+  text-align: center;
+}
+
+/* .mat-icon {
+  color: rgb(43, 98, 186);
+}
+
+.mat-icon-button {
+  background-color: #141414
+} */
