@@ -60,10 +60,22 @@ export class CartService {
     return this.cartProducts$.pipe(map(cartProductArray => cartProductArray.flatMap(func).reduce((a, b) => a + b, 0)));
   }
 
-  increaseQuantity(productId: number) {}
-    
+  increaseQuantity(product: Product, quantity: number = 1) {
+    this.changeQuantity(product, quantity)
+    this.cartProducts.next(this.getCartProducts());
+  }    
 
-  decreaseQuantity(productId: number) {}
+  decreaseQuantity(product: Product, quantity: number = -1) {
+    this.changeQuantity(product, quantity)
+    this.cartProducts.next(this.getCartProducts());
+  } 
 
-  isEmptyCart() {}
+  private changeQuantity(product: Product, quantity: number = 1) {
+    if (!this.cart[product.id]) return;
+    if (this.cart[product.id].count + quantity < 1) return;
+    this.cart[product.id] = {
+      ...this.cart[product.id],
+      count: this.cart[product.id].count + quantity,
+    };
+  } 
 }
