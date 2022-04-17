@@ -2,4 +2,18 @@ mat-card {
   display: flex;
   justify-content: space-between;
   margin: 15px;
+  background-color: #141414;
+  color: #3f51b5;
+}
+
+button {
+  background-color: #3f51b5;
+}
+
+mat-icon {
+  color: #141414;
+}
+
+mat-card-subtitle {
+  color: #3f51b5;
 }
