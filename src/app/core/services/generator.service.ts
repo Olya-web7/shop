@@ -7,3 +7,4 @@ export class GeneratorService {
 
   constructor() { }
 }
+// может не выложили?
